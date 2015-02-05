@@ -13,7 +13,8 @@
 @property (nonatomic, readonly) NSString *string;
 
 + (DLVersion *)localVersion;
-+ (instancetype)versionFromString:(NSString *)string;
++ (instancetype)versionWithString:(NSString *)string;
+
 - (NSComparisonResult)compare:(DLVersion *)other;
 - (BOOL)isEqualToVersion:(DLVersion *)version;
 

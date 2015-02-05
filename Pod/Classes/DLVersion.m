@@ -20,10 +20,10 @@
 
 + (DLVersion *)localVersion
 {
-    return [self versionFromString:[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
+    return [self versionWithString:[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
 }
 
-+ (instancetype)versionFromString:(NSString *)string
++ (instancetype)versionWithString:(NSString *)string
 {
     DLVersion *version = [[self alloc] init];
     NSArray *parts = [string componentsSeparatedByString:@"."];
