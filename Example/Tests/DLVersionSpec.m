@@ -70,6 +70,19 @@ describe(@"DLVersion", ^{
         });
     });
     
+    describe(@"- hash:", ^{
+        it(@"is equal for two equal versions", ^{
+            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.0.0"];
+            expect(version.hash).to.equal(anotherVersion.hash);
+        });
+        it(@"is not equal for two inequal versions", ^{
+            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.2.0"];
+            expect(version.hash).notTo.equal(anotherVersion.hash);
+        });
+    });
+    
     describe(@"- isEqualToVersion:", ^{
         it(@"is true if the versions match", ^{
             DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
