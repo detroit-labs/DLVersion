@@ -49,32 +49,32 @@
     return [NSString stringWithFormat:@"%li.%li.%li", (long)self.major, (long)self.minor, (long)self.patch];
 }
 
-- (DLVersionComparison)compare:(DLVersion *)other
+- (NSComparisonResult)compare:(DLVersion *)other
 {
     if (self.major == other.major) {
         if (self.minor == other.minor) {
             if (self.patch == other.patch) {
-                return DLVersionComparisonSame;
+                return NSOrderedSame;
             }
             else if (self.patch > other.patch) {
-                return DLVersionComparisonNewer;
+                return NSOrderedDescending;
             }
             else {
-                return DLVersionComparisonOlder;
+                return NSOrderedAscending;
             }
         }
         else if (self.minor > other.minor) {
-            return DLVersionComparisonNewer;
+            return NSOrderedDescending;
         }
         else {
-            return DLVersionComparisonOlder;
+            return NSOrderedAscending;
         }
     }
     else if (self.major > other.major) {
-        return DLVersionComparisonNewer;
+        return NSOrderedDescending;
     }
     else {
-        return DLVersionComparisonOlder;
+        return NSOrderedAscending;
     }
 }
 
