@@ -1,0 +1,28 @@
+PODS:
+  - DLVersion (0.1.0)
+  - Expecta (0.3.1)
+  - Specta (0.3.0.beta1)
+
+DEPENDENCIES:
+  - DLVersion (from `../`)
+  - Expecta
+  - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
+
+EXTERNAL SOURCES:
+  DLVersion:
+    :path: ../
+  Specta:
+    :git: https://github.com/specta/specta.git
+    :tag: v0.3.0.beta1
+
+CHECKOUT OPTIONS:
+  Specta:
+    :git: https://github.com/specta/specta.git
+    :tag: v0.3.0.beta1
+
+SPEC CHECKSUMS:
+  DLVersion: 3e4cd21066c311b39cd6cb002fc3604150fb87c2
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  Specta: d2158a483ad179e5f8d3a29f75ff4fc0ff6fab16
+
+COCOAPODS: 0.36.0.beta.2
