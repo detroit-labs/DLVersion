@@ -46,7 +46,36 @@
 
 - (NSString *)string
 {
-    return [NSString stringWithFormat:@"%i.%i.%i", self.major, self.minor, self.patch];
+    return [NSString stringWithFormat:@"%li.%li.%li", (long)self.major, (long)self.minor, (long)self.patch];
+}
+
+- (DLVersionComparison)compare:(DLVersion *)other
+{
+    if (self.major == other.major) {
+        if (self.minor == other.minor) {
+            if (self.patch == other.patch) {
+                return DLVersionComparisonSame;
+            }
+            else if (self.patch > other.patch) {
+                return DLVersionComparisonNewer;
+            }
+            else {
+                return DLVersionComparisonOlder;
+            }
+        }
+        else if (self.minor > other.minor) {
+            return DLVersionComparisonNewer;
+        }
+        else {
+            return DLVersionComparisonOlder;
+        }
+    }
+    else if (self.major > other.major) {
+        return DLVersionComparisonNewer;
+    }
+    else {
+        return DLVersionComparisonOlder;
+    }
 }
 
 - (NSString *)description

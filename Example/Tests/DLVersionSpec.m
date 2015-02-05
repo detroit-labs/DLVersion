@@ -43,6 +43,24 @@ describe(@"DLVersion", ^{
             expect([version string]).to.equal(@"1.0.0");
         });
     });
+
+    describe(@"- compare:", ^{
+        it(@"is the same if the versions match", ^{
+            DLVersion *version = [DLVersion fromString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion fromString:@"1.0.0"];
+            expect([version compare:anotherVersion]).to.equal(DLVersionComparisonSame);
+        });
+        it(@"is older if the other version is greater", ^{
+            DLVersion *version = [DLVersion fromString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion fromString:@"1.2.0"];
+            expect([version compare:anotherVersion]).to.equal(DLVersionComparisonOlder);
+        });
+        it(@"is newer if the other version is less", ^{
+            DLVersion *version = [DLVersion fromString:@"2.0.0"];
+            DLVersion *anotherVersion = [DLVersion fromString:@"1.2.0"];
+            expect([version compare:anotherVersion]).to.equal(DLVersionComparisonNewer);
+        });
+    });
 });
 
 SpecEnd
