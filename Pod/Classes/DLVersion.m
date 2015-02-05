@@ -10,9 +10,9 @@
 
 @interface DLVersion ()
 
-@property (nonatomic, assign) NSInteger major;
-@property (nonatomic, assign) NSInteger minor;
-@property (nonatomic, assign) NSInteger patch;
+@property (nonatomic, assign) NSUInteger major;
+@property (nonatomic, assign) NSUInteger minor;
+@property (nonatomic, assign) NSUInteger patch;
 
 @end
 
@@ -46,7 +46,7 @@
 
 - (NSString *)string
 {
-    return [NSString stringWithFormat:@"%li.%li.%li", (long)self.major, (long)self.minor, (long)self.patch];
+    return [NSString stringWithFormat:@"%lu.%lu.%lu", (long)self.major, (long)self.minor, (long)self.patch];
 }
 
 - (NSComparisonResult)compare:(DLVersion *)other
