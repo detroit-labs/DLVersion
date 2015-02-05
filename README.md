@@ -1,6 +1,6 @@
 # DLVersion
 
-[![CI Status](http://img.shields.io/travis/detroit-labs/DLVersion.svg?style=flat)](https://travis-ci.org/Nate West/DLVersion)
+[![CI Status](http://img.shields.io/travis/detroit-labs/DLVersion.svg?style=flat)](https://travis-ci.org/detroit-labs/DLVersion)
 [![Version](https://img.shields.io/cocoapods/v/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
 [![License](https://img.shields.io/cocoapods/l/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
 [![Platform](https://img.shields.io/cocoapods/p/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
