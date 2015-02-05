@@ -10,9 +10,9 @@
 
 @interface DLVersion ()
 
-@property (nonatomic, assign) NSInteger major;
-@property (nonatomic, assign) NSInteger minor;
-@property (nonatomic, assign) NSInteger patch;
+@property (nonatomic, assign) NSUInteger major;
+@property (nonatomic, assign) NSUInteger minor;
+@property (nonatomic, assign) NSUInteger patch;
 
 @end
 
@@ -20,12 +20,12 @@
 
 + (DLVersion *)localVersion
 {
-    return [DLVersion fromString:[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
+    return [self versionFromString:[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
 }
 
-+ (DLVersion *)fromString:(NSString *)string
++ (instancetype)versionFromString:(NSString *)string
 {
-    DLVersion *version = [[DLVersion alloc] init];
+    DLVersion *version = [[self alloc] init];
     NSArray *parts = [string componentsSeparatedByString:@"."];
     NSInteger numberOfComponents = [parts count];
 
@@ -46,35 +46,53 @@
 
 - (NSString *)string
 {
-    return [NSString stringWithFormat:@"%li.%li.%li", (long)self.major, (long)self.minor, (long)self.patch];
+    return [NSString stringWithFormat:@"%lu.%lu.%lu", (long)self.major, (long)self.minor, (long)self.patch];
 }
 
-- (DLVersionComparison)compare:(DLVersion *)other
+- (BOOL)isEqual:(id)object
+{
+    return ([object isKindOfClass:[DLVersion class]] &&
+            [self isEqualToVersion:(DLVersion *)object]);
+}
+
+- (BOOL)isEqualToVersion:(DLVersion *)version
+{
+    return (version.major == self.major &&
+            version.minor == self.minor &&
+            version.patch == self.patch);
+}
+
+- (NSUInteger)hash
+{
+    return [self.string hash];
+}
+
+- (NSComparisonResult)compare:(DLVersion *)other
 {
     if (self.major == other.major) {
         if (self.minor == other.minor) {
             if (self.patch == other.patch) {
-                return DLVersionComparisonSame;
+                return NSOrderedSame;
             }
             else if (self.patch > other.patch) {
-                return DLVersionComparisonNewer;
+                return NSOrderedDescending;
             }
             else {
-                return DLVersionComparisonOlder;
+                return NSOrderedAscending;
             }
         }
         else if (self.minor > other.minor) {
-            return DLVersionComparisonNewer;
+            return NSOrderedDescending;
         }
         else {
-            return DLVersionComparisonOlder;
+            return NSOrderedAscending;
         }
     }
     else if (self.major > other.major) {
-        return DLVersionComparisonNewer;
+        return NSOrderedDescending;
     }
     else {
-        return DLVersionComparisonOlder;
+        return NSOrderedAscending;
     }
 }
 

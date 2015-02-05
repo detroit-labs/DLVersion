@@ -8,17 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, DLVersionComparison) {
-    DLVersionComparisonSame,
-    DLVersionComparisonOlder,
-    DLVersionComparisonNewer
-};
-
 @interface DLVersion : NSObject
 
 + (DLVersion *)localVersion;
-+ (DLVersion *)fromString:(NSString *)string;
++ (instancetype)versionFromString:(NSString *)string;
 - (NSString *)string;
-- (DLVersionComparison)compare:(DLVersion *)other;
+- (NSComparisonResult)compare:(DLVersion *)other;
+- (BOOL)isEqualToVersion:(DLVersion *)version;
 
 @end
