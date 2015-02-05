@@ -51,8 +51,15 @@
 
 - (BOOL)isEqual:(id)object
 {
-    return ([object isKindOfClass:[DLVersion class]] &&
-            [self isEqualToVersion:(DLVersion *)object]);
+    if (self == object) {
+        return YES;
+    }
+    
+    if (![object isKindOfClass:[DLVersion class]]) {
+        return NO;
+    }
+    
+    return [self isEqualToVersion:(DLVersion *)object];
 }
 
 - (BOOL)isEqualToVersion:(DLVersion *)version
