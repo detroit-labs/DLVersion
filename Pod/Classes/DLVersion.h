@@ -14,5 +14,6 @@
 + (instancetype)versionFromString:(NSString *)string;
 - (NSString *)string;
 - (NSComparisonResult)compare:(DLVersion *)other;
+- (BOOL)isEqualToVersion:(DLVersion *)version;
 
 @end

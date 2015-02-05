@@ -61,6 +61,27 @@ describe(@"DLVersion", ^{
             expect([version compare:anotherVersion]).to.equal(NSOrderedDescending);
         });
     });
+    
+    describe(@"- isEqual:", ^{
+        it(@"is false if passed another class", ^{
+            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
+            NSString *aString = @"1.0.0";
+            expect([version isEqual:aString]).to.beFalsy;
+        });
+    });
+    
+    describe(@"- isEqualToVersion:", ^{
+        it(@"is true if the versions match", ^{
+            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.0.0"];
+            expect([version isEqualToVersion:anotherVersion]).to.beTruthy;
+        });
+        it(@"is false if the versions do not match", ^{
+            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.2.0"];
+            expect([version isEqualToVersion:anotherVersion]).to.beFalsy;
+        });
+    });
 });
 
 SpecEnd

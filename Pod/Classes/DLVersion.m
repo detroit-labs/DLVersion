@@ -49,12 +49,17 @@
     return [NSString stringWithFormat:@"%lu.%lu.%lu", (long)self.major, (long)self.minor, (long)self.patch];
 }
 
-- (BOOL)isEqual:(DLVersion *)object
+- (BOOL)isEqual:(id)object
 {
-    return ([object isKindOfClass:[self class]] &&
-            ((DLVersion *)object).major == self.major &&
-            ((DLVersion *)object).minor == self.minor &&
-            ((DLVersion *)object).patch == self.patch);
+    return ([object isKindOfClass:[DLVersion class]] &&
+            [self isEqualToVersion:(DLVersion *)object]);
+}
+
+- (BOOL)isEqualToVersion:(DLVersion *)version
+{
+    return (version.major == self.major &&
+            version.minor == self.minor &&
+            version.patch == self.patch);
 }
 
 - (NSUInteger)hash
