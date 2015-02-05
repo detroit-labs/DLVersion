@@ -1,5 +1,5 @@
 PODS:
-  - DLVersion (0.1.0)
+  - DLVersion (0.2.0)
   - Expecta (0.3.1)
   - Specta (0.3.0.beta1)
 
@@ -21,7 +21,7 @@ CHECKOUT OPTIONS:
     :tag: v0.3.0.beta1
 
 SPEC CHECKSUMS:
-  DLVersion: ad4e91b4a2e8aa7eb3f9e758318ef2e21885a0e0
+  DLVersion: 3c505d0b136832db372f85cb5d6eb27a8cbdb881
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Specta: d2158a483ad179e5f8d3a29f75ff4fc0ff6fab16
 
