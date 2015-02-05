@@ -27,7 +27,7 @@
 {
     DLVersion *version = [[self alloc] init];
     NSArray *parts = [string componentsSeparatedByString:@"."];
-    NSInteger numberOfComponents = [parts count];
+    NSInteger numberOfComponents = parts.count;
 
     if (numberOfComponents > 0) {
         version.major = [parts[0] integerValue];
