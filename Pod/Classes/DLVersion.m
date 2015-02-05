@@ -64,7 +64,7 @@
 
 - (NSUInteger)hash
 {
-    return [self.string hash];
+    return self.string.hash;
 }
 
 - (NSComparisonResult)compare:(DLVersion *)other
@@ -98,7 +98,7 @@
 
 - (NSString *)description
 {
-    return [self string];
+    return self.string;
 }
 
 @end
