@@ -11,7 +11,7 @@
 @interface DLVersion : NSObject
 
 + (DLVersion *)localVersion;
-+ (DLVersion *)fromString:(NSString *)string;
++ (instancetype)versionFromString:(NSString *)string;
 - (NSString *)string;
 - (NSComparisonResult)compare:(DLVersion *)other;
 
