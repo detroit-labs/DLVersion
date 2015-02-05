@@ -19,9 +19,9 @@
 SpecBegin(DLVersionSpec)
 
 describe(@"DLVersion", ^{
-    describe(@"- versionFromString:", ^{
+    describe(@"- versionWithString:", ^{
         it(@"can be created with a string", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.2.3"];
+            DLVersion *version = [DLVersion versionWithString:@"1.2.3"];
             expect(version.major).to.equal(1);
             expect(version.minor).to.equal(2);
             expect(version.patch).to.equal(3);
@@ -46,25 +46,25 @@ describe(@"DLVersion", ^{
 
     describe(@"- compare:", ^{
         it(@"is the same if the versions match", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.0.0"];
             expect([version compare:anotherVersion]).to.equal(NSOrderedSame);
         });
         it(@"is older if the other version is greater", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.2.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
             expect([version compare:anotherVersion]).to.equal(NSOrderedAscending);
         });
         it(@"is newer if the other version is less", ^{
-            DLVersion *version = [DLVersion versionFromString:@"2.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.2.0"];
+            DLVersion *version = [DLVersion versionWithString:@"2.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
             expect([version compare:anotherVersion]).to.equal(NSOrderedDescending);
         });
     });
     
     describe(@"- isEqual:", ^{
         it(@"is false if passed another class", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
             NSString *aString = @"1.0.0";
             expect([version isEqual:aString]).to.beFalsy;
         });
@@ -72,26 +72,26 @@ describe(@"DLVersion", ^{
     
     describe(@"- hash:", ^{
         it(@"is equal for two equal versions", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.0.0"];
             expect(version.hash).to.equal(anotherVersion.hash);
         });
         it(@"is not equal for two inequal versions", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.2.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
             expect(version.hash).notTo.equal(anotherVersion.hash);
         });
     });
     
     describe(@"- isEqualToVersion:", ^{
         it(@"is true if the versions match", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.0.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.0.0"];
             expect([version isEqualToVersion:anotherVersion]).to.beTruthy;
         });
         it(@"is false if the versions do not match", ^{
-            DLVersion *version = [DLVersion versionFromString:@"1.0.0"];
-            DLVersion *anotherVersion = [DLVersion versionFromString:@"1.2.0"];
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
             expect([version isEqualToVersion:anotherVersion]).to.beFalsy;
         });
     });
