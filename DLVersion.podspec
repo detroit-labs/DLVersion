@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/detroit-labs/DLVersion.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/detroitlabs'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
