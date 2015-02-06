@@ -20,14 +20,14 @@
 
 + (DLVersion *)localVersion
 {
-    return [self versionFromString:[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
+    return [self versionWithString:[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
 }
 
-+ (instancetype)versionFromString:(NSString *)string
++ (instancetype)versionWithString:(NSString *)string
 {
     DLVersion *version = [[self alloc] init];
     NSArray *parts = [string componentsSeparatedByString:@"."];
-    NSInteger numberOfComponents = [parts count];
+    NSInteger numberOfComponents = parts.count;
 
     if (numberOfComponents > 0) {
         version.major = [parts[0] integerValue];
@@ -51,8 +51,15 @@
 
 - (BOOL)isEqual:(id)object
 {
-    return ([object isKindOfClass:[DLVersion class]] &&
-            [self isEqualToVersion:(DLVersion *)object]);
+    if (self == object) {
+        return YES;
+    }
+    
+    if (![object isKindOfClass:[DLVersion class]]) {
+        return NO;
+    }
+    
+    return [self isEqualToVersion:(DLVersion *)object];
 }
 
 - (BOOL)isEqualToVersion:(DLVersion *)version
@@ -64,7 +71,7 @@
 
 - (NSUInteger)hash
 {
-    return [self.string hash];
+    return self.string.hash;
 }
 
 - (NSComparisonResult)compare:(DLVersion *)other
@@ -98,7 +105,7 @@
 
 - (NSString *)description
 {
-    return [self string];
+    return self.string;
 }
 
 @end

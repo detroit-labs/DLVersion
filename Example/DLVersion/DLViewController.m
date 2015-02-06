@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     NSLog(@"%@", [DLVersion localVersion]);
-    NSLog(@"%@", [DLVersion versionFromString:@"1.2.3"]);
+    NSLog(@"%@", [DLVersion versionWithString:@"1.2.3"]);
 }
 
 @end
