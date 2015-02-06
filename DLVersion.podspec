@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DLVersion"
-  s.version          = "0.2.0"
+  s.version          = "0.3.0"
   s.summary          = "Utilities for working with app verisons"
   s.homepage         = "https://github.com/detroit-labs/DLVersion"
   s.license          = 'MIT'
