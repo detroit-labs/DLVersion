@@ -17,5 +17,7 @@
 
 - (NSComparisonResult)compare:(DLVersion *)other;
 - (BOOL)isEqualToVersion:(DLVersion *)version;
+- (BOOL)isOlderThanVersion:(DLVersion *)version;
+- (BOOL)isNewerThanVersion:(DLVersion *)version;
 
 @end

@@ -95,6 +95,35 @@ describe(@"DLVersion", ^{
             expect([version isEqualToVersion:anotherVersion]).to.beFalsy;
         });
     });
+
+    describe(@"- isOlderThanVersion:", ^{
+        it(@"is older if the version is smaller", ^{
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
+            expect([version isOlderThanVersion:anotherVersion]).to.equal(YES);
+        });
+
+        it(@"is not older if the version is greater", ^{
+            DLVersion *version = [DLVersion versionWithString:@"2.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
+            expect([version isOlderThanVersion:anotherVersion]).to.equal(NO);
+        });
+    });
+
+    describe(@"- isNewerThanVersion:", ^{
+        it(@"is newer if the version is greater", ^{
+            DLVersion *version = [DLVersion versionWithString:@"2.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
+            expect([version isNewerThanVersion:anotherVersion]).to.equal(YES);
+        });
+        
+        it(@"is not newer if the version is smaller", ^{
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            DLVersion *anotherVersion = [DLVersion versionWithString:@"1.2.0"];
+            expect([version isNewerThanVersion:anotherVersion]).to.equal(NO);
+        });
+        
+    });
 });
 
 SpecEnd

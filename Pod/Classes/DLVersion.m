@@ -103,6 +103,16 @@
     }
 }
 
+- (BOOL)isOlderThanVersion:(DLVersion *)version
+{
+    return [self compare:version] == NSOrderedAscending;
+}
+
+- (BOOL)isNewerThanVersion:(DLVersion *)version
+{
+    return [self compare:version] == NSOrderedDescending;
+}
+
 - (NSString *)description
 {
     return self.string;
