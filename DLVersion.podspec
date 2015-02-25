@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DLVersion"
-  s.version          = "0.3.1"
+  s.version          = "0.3.2"
   s.summary          = "Utilities for working with app verisons"
   s.homepage         = "https://github.com/detroit-labs/DLVersion"
   s.license          = 'MIT'
@@ -12,9 +12,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'DLVersion' => ['Pod/Assets/*.png']
-  }
-
   s.public_header_files = 'Pod/Classes/**/*.h'
 end
