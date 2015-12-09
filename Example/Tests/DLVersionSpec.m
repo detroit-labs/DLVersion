@@ -68,6 +68,11 @@ describe(@"DLVersion", ^{
             NSString *aString = @"1.0.0";
             expect([version isEqual:aString]).to.beFalsy;
         });
+        
+        it(@"is false if passed nil", ^{
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            expect([version isEqual:nil]).to.beFalsy;
+        });
     });
     
     describe(@"- hash:", ^{
