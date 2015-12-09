@@ -51,6 +51,10 @@
 
 - (BOOL)isEqual:(id)object
 {
+    if (object == nil) {
+        return NO;
+    }
+    
     if (self == object) {
         return YES;
     }
