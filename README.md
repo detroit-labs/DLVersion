@@ -18,6 +18,19 @@ it, simply add the following line to your Podfile:
 pod "DLVersion"
 ```
 
+If this command fails with the message below, check that you have [added your ssh key to GitHub](https://help.github.com/articles/generating-ssh-keys/):
+
+```sh
+Pre-downloading: `DetroitLabsRecipes` from `git@github.com:detroit-labs/detroit-labs-recipes-ios.git`, tag `v0.4.0`
+[!] /usr/local/bin/git clone git@github.com:detroit-labs/detroit-labs-recipes-ios.git /path/to/local/repo/myrepo/Pods/DetroitLabsRecipes --single-branch --depth 1 --branch v0.4.0
+
+Cloning into '/path/to/local/repo/myrepo/Pods/DetroitLabsRecipes'...
+
+Permission denied (publickey).
+```
+
+If you are asked for your username & password and your GitHub account is 2-factor auth enabled, you may need to [authenticate using an access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
+
 ## Author
 
 Nate West, nwest@detroitlabs.com
