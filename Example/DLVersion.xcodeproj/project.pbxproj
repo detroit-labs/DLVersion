@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* DLVersionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* DLVersionSpec.m */; };
 		A490A490CC5A656CC7473509 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 321A5FF7C4429B12A91899DD /* libPods-Tests.a */; };
 		C9FE0BC542EB950A99DEB398 /* libPods-DLVersion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B406C1F1E897BE152D11E95 /* libPods-DLVersion.a */; };
+		CE20BAEF4A49499681996CD4 /* libPods-DLVersionWatchOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 897F894C044BAABD88A121E8 /* libPods-DLVersionWatchOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +37,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F78849A1C441102007B53A8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1F78849C1C441102007B53A8 /* libDLVersionWatchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDLVersionWatchOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		21199084B2734FC5F964FFA3 /* Pods-DLVersion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLVersion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLVersion/Pods-DLVersion.debug.xcconfig"; sourceTree = "<group>"; };
 		321A5FF7C4429B12A91899DD /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		588EED0FE742A578ED25C989 /* Pods-DLVersionWatchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLVersionWatchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLVersionWatchOS/Pods-DLVersionWatchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5A27CBBCACA48699CA373CB9 /* Pods-DLVersionWatchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLVersionWatchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLVersionWatchOS/Pods-DLVersionWatchOS.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DLVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,12 +80,21 @@
 		7147E55E79740CF6450D82FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7A7B275E888766866E157DD3 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B406C1F1E897BE152D11E95 /* libPods-DLVersion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLVersion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		897F894C044BAABD88A121E8 /* libPods-DLVersionWatchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLVersionWatchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD9427C4AF2B86C36CD7162 /* DLVersion.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DLVersion.podspec; path = ../DLVersion.podspec; sourceTree = "<group>"; };
 		B22065DAE2BE79FEBCAD41E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BAC32C8B7E1ABE6AB26053FC /* Pods-DLVersion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLVersion.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLVersion/Pods-DLVersion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F7884991C441102007B53A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE20BAEF4A49499681996CD4 /* libPods-DLVersionWatchOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,6 +137,7 @@
 			children = (
 				6003F58A195388D20070C39A /* DLVersion.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
+				1F78849C1C441102007B53A8 /* libDLVersionWatchOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +151,7 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				7B406C1F1E897BE152D11E95 /* libPods-DLVersion.a */,
 				321A5FF7C4429B12A91899DD /* libPods-Tests.a */,
+				897F894C044BAABD88A121E8 /* libPods-DLVersionWatchOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,6 +218,8 @@
 				BAC32C8B7E1ABE6AB26053FC /* Pods-DLVersion.release.xcconfig */,
 				7A7B275E888766866E157DD3 /* Pods-Tests.debug.xcconfig */,
 				6E9F639676F58B22B9C0D4A1 /* Pods-Tests.release.xcconfig */,
+				588EED0FE742A578ED25C989 /* Pods-DLVersionWatchOS.debug.xcconfig */,
+				5A27CBBCACA48699CA373CB9 /* Pods-DLVersionWatchOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -198,6 +227,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1F78849B1C441102007B53A8 /* DLVersionWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F7884A41C441102007B53A8 /* Build configuration list for PBXNativeTarget "DLVersionWatchOS" */;
+			buildPhases = (
+				AB6CAB1BC5015F340D0D85CB /* Check Pods Manifest.lock */,
+				1F7884981C441102007B53A8 /* Sources */,
+				1F7884991C441102007B53A8 /* Frameworks */,
+				1F78849A1C441102007B53A8 /* CopyFiles */,
+				309E31124F8BB281ECE2B4D1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLVersionWatchOS;
+			productName = DLVersionWatchOS;
+			productReference = 1F78849C1C441102007B53A8 /* libDLVersionWatchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		6003F589195388D20070C39A /* DLVersion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "DLVersion" */;
@@ -247,6 +295,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Nate West";
 				TargetAttributes = {
+					1F78849B1C441102007B53A8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -267,6 +318,7 @@
 			targets = (
 				6003F589195388D20070C39A /* DLVersion */,
 				6003F5AD195388D20070C39A /* Tests */,
+				1F78849B1C441102007B53A8 /* DLVersionWatchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +376,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		309E31124F8BB281ECE2B4D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLVersionWatchOS/Pods-DLVersionWatchOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F5E6F3FA2B212A59FB4E18E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,9 +421,31 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLVersion/Pods-DLVersion-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB6CAB1BC5015F340D0D85CB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F7884981C441102007B53A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,6 +510,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F7884A21C441102007B53A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 588EED0FE742A578ED25C989 /* Pods-DLVersionWatchOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1F7884A31C441102007B53A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A27CBBCACA48699CA373CB9 /* Pods-DLVersionWatchOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,6 +625,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLVersion/DLVersion-Prefix.pch";
 				INFOPLIST_FILE = "DLVersion/DLVersion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.detroitlabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -518,6 +641,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLVersion/DLVersion-Prefix.pch";
 				INFOPLIST_FILE = "DLVersion/DLVersion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.detroitlabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -569,6 +693,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F7884A41C441102007B53A8 /* Build configuration list for PBXNativeTarget "DLVersionWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F7884A21C441102007B53A8 /* Debug */,
+				1F7884A31C441102007B53A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "DLVersion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

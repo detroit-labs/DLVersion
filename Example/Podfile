@@ -4,6 +4,12 @@ target 'DLVersion', :exclusive => true do
   pod "DLVersion", :path => "../"
 end
 
+target 'DLVersionWatchOS', :exclusive => true do
+  platform :watchos, '2.0'
+
+  pod "DLVersion", :path => "../"
+end
+
 target 'Tests', :exclusive => true do
   pod "DLVersion", :path => "../"
 
