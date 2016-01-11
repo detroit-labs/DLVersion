@@ -3,10 +3,14 @@
 //  DLVersionSpec
 //
 //  Created by Nate West on 02/05/2015.
-//  Copyright (c) 2014 Nate West. All rights reserved.
+//  Copyright © 2016 Detroit Labs. All rights reserved.
 //
 
 #import <DLVersion/DLVersion.h>
+
+#define EXP_SHORTHAND
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 
 @interface DLVersion ()
 
@@ -67,6 +71,11 @@ describe(@"DLVersion", ^{
             DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
             NSString *aString = @"1.0.0";
             expect([version isEqual:aString]).to.beFalsy;
+        });
+        
+        it(@"is false if passed nil", ^{
+            DLVersion *version = [DLVersion versionWithString:@"1.0.0"];
+            expect([version isEqual:nil]).to.beFalsy;
         });
     });
     

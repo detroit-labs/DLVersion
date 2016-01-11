@@ -3,7 +3,7 @@
 //  DLVersion
 //
 //  Created by Nate West on 02/05/2015.
-//  Copyright (c) 2014 Nate West. All rights reserved.
+//  Copyright © 2016 Detroit Labs. All rights reserved.
 //
 
 #import "DLViewController.h"
