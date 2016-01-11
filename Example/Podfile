@@ -51,7 +51,7 @@ end
 # http://stackoverflow.com/a/34573451/105431
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if target.platform_name == :tvos then
+    if target.platform_name == :tvos || target.platform_name == :watchos then
       target.build_configurations.each do |config|
           config.build_settings['ENABLE_BITCODE'] = 'YES'
       end
