@@ -8,6 +8,10 @@
 
 #import <DLVersion/DLVersion.h>
 
+#define EXP_SHORTHAND
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
+
 @interface DLVersion ()
 
 @property (nonatomic, assign) NSInteger major;

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "DLVersion.app"
-               BlueprintName = "DLVersion"
+               BlueprintIdentifier = "1FC52E661C441FDF001106E8"
+               BuildableName = "DLVersion tvOS.app"
+               BlueprintName = "DLVersion tvOS"
                ReferencedContainer = "container:DLVersion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "1F7884B51C441387007B53A8"
+               BuildableName = "DLVersionTVOSTests.xctest"
+               BlueprintName = "DLVersionTVOSTests"
                ReferencedContainer = "container:DLVersion.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "DLVersion.app"
-            BlueprintName = "DLVersion"
+            BlueprintIdentifier = "1FC52E661C441FDF001106E8"
+            BuildableName = "DLVersion tvOS.app"
+            BlueprintName = "DLVersion tvOS"
             ReferencedContainer = "container:DLVersion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "DLVersion.app"
-            BlueprintName = "DLVersion"
+            BlueprintIdentifier = "1FC52E661C441FDF001106E8"
+            BuildableName = "DLVersion tvOS.app"
+            BlueprintName = "DLVersion tvOS"
             ReferencedContainer = "container:DLVersion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -84,9 +84,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "DLVersion.app"
-            BlueprintName = "DLVersion"
+            BlueprintIdentifier = "1FC52E661C441FDF001106E8"
+            BuildableName = "DLVersion tvOS.app"
+            BlueprintName = "DLVersion tvOS"
             ReferencedContainer = "container:DLVersion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,7 +95,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

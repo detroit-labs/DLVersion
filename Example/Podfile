@@ -1,6 +1,34 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'DLVersion', :exclusive => true do
+# App Targets
+target 'DLVersion iOS', :exclusive => true do
+  platform :ios, '6.0'
+
+  pod "DLVersion", :path => "../"
+end
+
+target 'DLVersion watchOS Extension', :exclusive => true do
+  platform :watchos, '2.0'
+
+  pod "DLVersion", :path => "../"
+end
+
+target 'DLVersion tvOS', :exclusive => false do
+  platform :tvos, '9.0'
+
+  pod "DLVersion", :path => "../"
+end
+
+target 'DLVersion OS X', :exclusive => false do
+  platform :osx, '10.9'
+
+  pod "DLVersion", :path => "../"
+end
+
+# Framework Targets
+target 'DLVersionIOS', :exclusive => true do
+  platform :ios, '6.0'
+
   pod "DLVersion", :path => "../"
 end
 
@@ -22,7 +50,10 @@ target 'DLVersionOSX', :exclusive => true do
   pod "DLVersion", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
+# Test Targets
+target 'DLVersionIOSTests', :exclusive => true do
+  platform :ios, '6.0'
+  
   pod "DLVersion", :path => "../"
 
   pod 'Specta'
