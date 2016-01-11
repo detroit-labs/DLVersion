@@ -16,6 +16,12 @@ target 'DLVersionTVOS', :exclusive => true do
   pod "DLVersion", :path => "../"
 end
 
+target 'DLVersionOSX', :exclusive => true do
+  platform :osx, '10.9'
+
+  pod "DLVersion", :path => "../"
+end
+
 target 'Tests', :exclusive => true do
   pod "DLVersion", :path => "../"
 
@@ -32,12 +38,23 @@ target 'DLVersionTVOSTests', :exclusive => true do
   pod 'Expecta'
 end
 
+target 'DLVersionOSXTests', :exclusive => true do
+  platform :osx, '10.9'
+  
+  pod "DLVersion", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
+
 # Hack to get around requiring Bitcode on tvOS.
 # http://stackoverflow.com/a/34573451/105431
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-        config.build_settings['ENABLE_BITCODE'] = 'YES'
+    if target.platform_name == :tvos then
+      target.build_configurations.each do |config|
+          config.build_settings['ENABLE_BITCODE'] = 'YES'
+      end
     end
   end
-end# 
+end 
