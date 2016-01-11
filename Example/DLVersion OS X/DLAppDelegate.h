@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DLAppDelegate.h
 //  DLVersion OS X
 //
 //  Created by Jeff Kelley on 1/11/16.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@interface DLAppDelegate : NSObject <NSApplicationDelegate>
 
 @end
-

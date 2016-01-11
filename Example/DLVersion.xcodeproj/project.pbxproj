@@ -16,15 +16,15 @@
 		1FC52E711C441FDF001106E8 /* DLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52E701C441FDF001106E8 /* DLViewController.m */; };
 		1FC52E741C441FDF001106E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52E721C441FDF001106E8 /* Main.storyboard */; };
 		1FC52E761C441FDF001106E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52E751C441FDF001106E8 /* Assets.xcassets */; };
-		1FC52E851C4421D7001106E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52E841C4421D7001106E8 /* AppDelegate.m */; };
+		1FC52E851C4421D7001106E8 /* DLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52E841C4421D7001106E8 /* DLAppDelegate.m */; };
 		1FC52E881C4421D7001106E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52E871C4421D7001106E8 /* main.m */; };
 		1FC52E8A1C4421D7001106E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52E891C4421D7001106E8 /* Assets.xcassets */; };
 		1FC52E8D1C4421D7001106E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52E8B1C4421D7001106E8 /* MainMenu.xib */; };
 		1FC52E9A1C442474001106E8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52E981C442474001106E8 /* Interface.storyboard */; };
 		1FC52E9C1C442474001106E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52E9B1C442474001106E8 /* Assets.xcassets */; };
 		1FC52EA31C442474001106E8 /* DLVersion watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC52EA21C442474001106E8 /* DLVersion watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1FC52EA91C442474001106E8 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52EA81C442474001106E8 /* InterfaceController.m */; };
-		1FC52EAC1C442474001106E8 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52EAB1C442474001106E8 /* ExtensionDelegate.m */; };
+		1FC52EA91C442474001106E8 /* DLInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52EA81C442474001106E8 /* DLInterfaceController.m */; };
+		1FC52EAC1C442474001106E8 /* DLExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC52EAB1C442474001106E8 /* DLExtensionDelegate.m */; };
 		1FC52EAE1C442474001106E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC52EAD1C442474001106E8 /* Assets.xcassets */; };
 		1FC52EB21C442474001106E8 /* DLVersion watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FC52E961C442474001106E8 /* DLVersion watchOS.app */; };
 		256D5565539C1376BB296166 /* libPods-DLVersionIOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122A9957DA89A6650A738714 /* libPods-DLVersionIOSTests.a */; };
@@ -169,8 +169,8 @@
 		1FC52E751C441FDF001106E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC52E771C441FDF001106E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC52E811C4421D7001106E8 /* DLVersion OS X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DLVersion OS X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC52E831C4421D7001106E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1FC52E841C4421D7001106E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FC52E831C4421D7001106E8 /* DLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAppDelegate.h; sourceTree = "<group>"; };
+		1FC52E841C4421D7001106E8 /* DLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAppDelegate.m; sourceTree = "<group>"; };
 		1FC52E871C4421D7001106E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FC52E891C4421D7001106E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC52E8C1C4421D7001106E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -180,10 +180,10 @@
 		1FC52E9B1C442474001106E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC52E9D1C442474001106E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC52EA21C442474001106E8 /* DLVersion watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DLVersion watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC52EA71C442474001106E8 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		1FC52EA81C442474001106E8 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		1FC52EAA1C442474001106E8 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
-		1FC52EAB1C442474001106E8 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		1FC52EA71C442474001106E8 /* DLInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLInterfaceController.h; sourceTree = "<group>"; };
+		1FC52EA81C442474001106E8 /* DLInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLInterfaceController.m; sourceTree = "<group>"; };
+		1FC52EAA1C442474001106E8 /* DLExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLExtensionDelegate.h; sourceTree = "<group>"; };
+		1FC52EAB1C442474001106E8 /* DLExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLExtensionDelegate.m; sourceTree = "<group>"; };
 		1FC52EAD1C442474001106E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC52EAF1C442474001106E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27EF700311DD07511C0DA213 /* Pods-DLVersionTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLVersionTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLVersionTVOSTests/Pods-DLVersionTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -366,8 +366,8 @@
 		1FC52E821C4421D7001106E8 /* DLVersion OS X */ = {
 			isa = PBXGroup;
 			children = (
-				1FC52E831C4421D7001106E8 /* AppDelegate.h */,
-				1FC52E841C4421D7001106E8 /* AppDelegate.m */,
+				1FC52E831C4421D7001106E8 /* DLAppDelegate.h */,
+				1FC52E841C4421D7001106E8 /* DLAppDelegate.m */,
 				1FC52E891C4421D7001106E8 /* Assets.xcassets */,
 				1FC52E8B1C4421D7001106E8 /* MainMenu.xib */,
 				1FC52E8E1C4421D7001106E8 /* Info.plist */,
@@ -397,10 +397,10 @@
 		1FC52EA61C442474001106E8 /* DLVersion watchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
-				1FC52EA71C442474001106E8 /* InterfaceController.h */,
-				1FC52EA81C442474001106E8 /* InterfaceController.m */,
-				1FC52EAA1C442474001106E8 /* ExtensionDelegate.h */,
-				1FC52EAB1C442474001106E8 /* ExtensionDelegate.m */,
+				1FC52EA71C442474001106E8 /* DLInterfaceController.h */,
+				1FC52EA81C442474001106E8 /* DLInterfaceController.m */,
+				1FC52EAA1C442474001106E8 /* DLExtensionDelegate.h */,
+				1FC52EAB1C442474001106E8 /* DLExtensionDelegate.m */,
 				1FC52EAD1C442474001106E8 /* Assets.xcassets */,
 				1FC52EAF1C442474001106E8 /* Info.plist */,
 			);
@@ -1455,7 +1455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC52E881C4421D7001106E8 /* main.m in Sources */,
-				1FC52E851C4421D7001106E8 /* AppDelegate.m in Sources */,
+				1FC52E851C4421D7001106E8 /* DLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1463,8 +1463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC52EAC1C442474001106E8 /* ExtensionDelegate.m in Sources */,
-				1FC52EA91C442474001106E8 /* InterfaceController.m in Sources */,
+				1FC52EAC1C442474001106E8 /* DLExtensionDelegate.m in Sources */,
+				1FC52EA91C442474001106E8 /* DLInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

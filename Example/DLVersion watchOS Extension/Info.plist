@@ -33,8 +33,8 @@
 		<string>com.apple.watchkit</string>
 	</dict>
 	<key>RemoteInterfacePrincipalClass</key>
-	<string>InterfaceController</string>
+	<string>DLInterfaceController</string>
 	<key>WKExtensionDelegateClassName</key>
-	<string>ExtensionDelegate</string>
+	<string>DLExtensionDelegate</string>
 </dict>
 </plist>
