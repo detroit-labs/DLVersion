@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
 [![Platform](https://img.shields.io/cocoapods/p/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
 
+DLVersions is a model for working with Cocoa and Cocoa Touch app versions.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
