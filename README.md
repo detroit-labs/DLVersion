@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
 [![Platform](https://img.shields.io/cocoapods/p/DLVersion.svg?style=flat)](http://cocoadocs.org/docsets/DLVersion)
 
-DLVersions is a model for working with Cocoa and Cocoa Touch app versions.
+DLVersion is a model for working with iOS, macOS, tvOS and watchOS versions.
 
 ## Usage
 
@@ -22,7 +22,8 @@ pod "DLVersion"
 
 ## Author
 
-Nate West, nwest@detroitlabs.com
+Vincent Frascello, vincent.frascello@detroitlabs.com
+Nate West
 
 ## License
 
