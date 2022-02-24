@@ -54,15 +54,15 @@ public extension DLVersion {
         return self.versionComponents.string ?? "0.0.0"
     }
     
-    func isEqualTo(version: DLVersion) -> Bool{
+    func isEqualToVersion(_ version: DLVersion) -> Bool{
         return self == version
     }
     
-    func isOlderThan(version: DLVersion) -> Bool {
+    func isOlderThanVersion(_ version: DLVersion) -> Bool {
         return compare(version) == .orderedAscending
     }
     
-    func isNewerThan(version: DLVersion) -> Bool {
+    func isNewerThanVersion(_ version: DLVersion) -> Bool {
         return compare(version) == .orderedDescending
     }
 }

@@ -28,18 +28,18 @@ struct ContentView: View {
             }
             Group {
                 Text("Comparisons").font(.callout)
-                Text("**isOlderThan(version:)** \(olderVersion.string) is Older Than \(newerVersion.string): \(olderVersion.isOlderThan(version: newerVersion).description)")
-                Text("**isOlderThan(version:)** \(newerVersion.string) is Older Than \(olderVersion.string): \(newerVersion.isOlderThan(version: olderVersion).description)")
-                Text("**isNewerThan(version:)** \(olderVersion.string) is Newer Than \(newerVersion.string): \(olderVersion.isNewerThan(version: newerVersion).description)")
-                Text("**isNewerThan(version:)** \(newerVersion.string) is Newer Than \(olderVersion.string): \(newerVersion.isNewerThan(version: olderVersion).description)")
-                Text("**isEqualTo(version:)** \(newerVersion.string) is Equal To \(olderVersion.string): \(newerVersion.isEqualTo(version: olderVersion).description)")
-                Text("**isEqualTo(version:)** \(olderVersion.string) is Equal To \(expandedVersion.string): \(olderVersion.isEqualTo(version: expandedVersion).description)")
+                Text("**isOlderThan(version:)** \(olderVersion.string) is Older Than \(newerVersion.string): \(olderVersion.isOlderThanVersion(newerVersion).description)")
+                Text("**isOlderThan(version:)** \(newerVersion.string) is Older Than \(olderVersion.string): \(newerVersion.isOlderThanVersion(olderVersion).description)")
+                Text("**isNewerThan(version:)** \(olderVersion.string) is Newer Than \(newerVersion.string): \(olderVersion.isNewerThanVersion(newerVersion).description)")
+                Text("**isNewerThan(version:)** \(newerVersion.string) is Newer Than \(olderVersion.string): \(newerVersion.isNewerThanVersion(olderVersion).description)")
+                Text("**isEqualTo(version:)** \(newerVersion.string) is Equal To \(olderVersion.string): \(newerVersion.isEqualToVersion(olderVersion).description)")
+                Text("**isEqualTo(version:)** \(olderVersion.string) is Equal To \(expandedVersion.string): \(olderVersion.isEqualToVersion(expandedVersion).description)")
             }
             Group {
                 Text("\n*Comparing Major, Minor, and Patch versions works as well.*\n")
-                Text("**isNewerThan(version:)** \(olderVersion.string) is Newer Than \(minorVersion.string): \(olderVersion.isNewerThan(version: minorVersion).description)")
-                Text("**isNewerThan(version:)** \(minorVersion.string) is Older Than \(expandedVersion.string): \(minorVersion.isOlderThan(version: olderVersion).description)")
-                Text("**isEqualTo(version:)** \(majorVersion.string) is Equal To \(expandedVersion.string): \(majorVersion.isEqualTo(version: expandedVersion).description)")
+                Text("**isNewerThan(version:)** \(olderVersion.string) is Newer Than \(minorVersion.string): \(olderVersion.isNewerThanVersion(minorVersion).description)")
+                Text("**isNewerThan(version:)** \(minorVersion.string) is Older Than \(expandedVersion.string): \(minorVersion.isOlderThanVersion(olderVersion).description)")
+                Text("**isEqualTo(version:)** \(majorVersion.string) is Equal To \(expandedVersion.string): \(majorVersion.isEqualToVersion(expandedVersion).description)")
             }
         }.padding().font(.system(size: 10, weight: .light))
     }
