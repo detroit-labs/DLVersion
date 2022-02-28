@@ -8,16 +8,16 @@
 
 import Foundation
 
-final public class DLVersion: NSObject {
+final public class DLVersion {
     
     private var versionComponents: VersionType
     
-    private init(for versionString: String) {
-        let filteredString = versionString.filter( { ($0.isASCII && $0.isWholeNumber) || $0 == "." })
+    private init(for versionString: String?) throws {
+        guard let filteredString = versionString?.filter( { ($0.isASCII && $0.isWholeNumber) || $0 == "." }) else { throw DLVersionError.malformedString }
         let parts  = filteredString.components(separatedBy: ".").filter( { !$0.isEmpty }).map({ Int($0)! })
         switch parts.count {
         case 0:
-            self.versionComponents = .empty
+            throw DLVersionError.malformedString
         case 1:
             self.versionComponents = .major(parts[0])
         case 2:
@@ -30,31 +30,32 @@ final public class DLVersion: NSObject {
     }
 }
 
-@objc
 public extension DLVersion {
     
-    static func version(string: String) -> DLVersion {
-        return .init(for: string)
+    static func version(string: String?) throws -> DLVersion {
+        return try .init(for: string)
     }
     
-    static func localVersion() -> DLVersion {
-        guard let bundleVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return DLVersion.version(string: "0.0.0") }
-        return version(string: bundleVersion)
+    static func localVersion() throws -> DLVersion {
+        guard let bundleVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            throw DLVersionError.noBundleVersion
+        }
+        return try version(string: bundleVersion)
     }
     
-    override var description: String {
+    var description: String {
         return string
     }
     
-    override var hash: Int {
+    var hash: Int {
         return self.string.hash
     }
     
     var string: String {
-        return self.versionComponents.string ?? "0.0.0"
+        return self.versionComponents.string
     }
     
-    func isEqualToVersion(_ version: DLVersion) -> Bool{
+    func isEqualToVersion(_ version: DLVersion) -> Bool {
         return self == version
     }
     
@@ -79,16 +80,13 @@ private extension DLVersion {
 }
 
 private enum VersionType: Equatable {
-    case empty
     case major(Int)
     case minor(Int, Int)
     case patch(Int, Int, Int)
     case expanded([Int])
     
-    var string: String? {
+    var string: String {
         switch self {
-        case .empty:
-            return nil
         case .major(let major):
             return "\(major)"
         case .minor(let major, let minor):
@@ -106,5 +104,19 @@ private enum VersionType: Equatable {
     
     static func == (lhs: VersionType, rhs: VersionType) -> Bool {
         return lhs.string == rhs.string
+    }
+}
+
+public enum DLVersionError: Error {
+    case noBundleVersion
+    case malformedString
+    
+    var localizedDescription: String {
+        switch self {
+        case .noBundleVersion:
+            return "DLVersionError: Unable to retrieve local version from bundle."
+        case .malformedString:
+            return "DLVersionError: The version string provided cannot be parsed."
+        }
     }
 }
